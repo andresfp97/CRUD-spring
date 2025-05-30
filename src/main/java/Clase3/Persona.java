@@ -6,8 +6,9 @@ import jakarta.persistence.*;
 public class Persona {
 
     //Atributos
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private String nombre;
     private String apellido;
     private int edad;
@@ -17,7 +18,7 @@ public class Persona {
 
     }
     //Constructor Compuesto
-    public Persona(int id, String nombre, String apellido, int edad) {
+    public Persona(Long id, String nombre, String apellido, int edad) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -45,11 +46,11 @@ public class Persona {
         this.edad = edad;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
